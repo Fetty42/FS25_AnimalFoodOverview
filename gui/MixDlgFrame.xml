@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" size="650px 800px">        
+        <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+        <ThreePartBitmap profile="fs25_dialogBgTop" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="dialogTitle" text="$l10n_ui_mixturesDlg_title" id="dialogTitleElement" position="0px -30px" />
+
+    
+        <!-- Main list -->
+            <Bitmap profile="ingameMenuMyList" id="tableHeaderBox" position="35px -90px" size="550px 50px">
+                <Text profile="ingameMenuMyHeaderRight" position="15px -0px" size="40px 40.77px" text="$l10n_ui_mixturesDlg_header_Min"/>
+                <Text profile="ingameMenuMyHeaderRight" position="75px -0px" size="40px 40.77px" text="$l10n_ui_mixturesDlg_header_Max"/>
+                <Text profile="ingameMenuMyHeaderLeft" position="145px -0px" size="400px 40.77px" text="$l10n_ui_mixturesDlg_header_FillTypeTitles"/>
+                <ThreePartBitmap profile="fs25_lineSeparatorBottom" position="0px 2px" />
+            </Bitmap>
+
+            <SmoothList profile="ingameMenuMyList" id="mixtureRecipesTable" focusInit="onOpen" focusChangeTop="nil" focusChangeBottom="nil" listSectionHeader="section" position="40px -145px" size="540px 450px">
+                <ListItem profile="ingameMenuMyListItem"  name="orderRowTemplate" size="540px 40.77px">
+                    <Text profile="ingameMenuMyRowCellRight" position="10px 0px" size="40px 40.77px" name="Min" />
+                    <Text profile="ingameMenuMyRowCellRight" position="70px 0px" size="40px 40.77px" name="Max"/>
+                    <bitmap profile="ingameMenuMyRowCellImage" position="140px 0px" name="FillTypeIcon"/>
+                    <Text profile="ingameMenuMyRowCellLeft" position="175px 0px" size="365px 40.77px" name="FillTypeTitles" textLayoutMode="scrolling"/>
+                </ListItem>
+                <ListItem profile="ingameMenuMyListItem" name="section" imageColor="0 0 0 0.35">
+                    <Text profile="ingameMenuMyRowSectionLeft" name="title" textSize="18px" size="355px 40.77px"/>
+                </ListItem>
+            </SmoothList>
+
+            <ThreePartBitmap profile="fs25_listSliderBox" position="-30px -60px" size="12px 555px" with="anchorTopRight">
+                <Slider profile="fs25_listSlider" size="6px 547px" dataElementId="mixtureRecipesTable" id="tableSlider" />
+            </ThreePartBitmap>  
+        </GuiElement>
+
+        <!-- Buttons -->
+        <BoxLayout profile="fs25_dialogButtonBox" size="550px 60px">
+            <Button profile="buttonBack" text="$l10n_ui_animalFoodDlg_btnClose" onClick="onClickClose" />
+        </BoxLayout>
+    </GuiElement>
+</GUI>

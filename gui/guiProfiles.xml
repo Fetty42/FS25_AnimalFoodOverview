@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorWhite" value="1 1 1 1"/>
+        <Preset name="colorListHeaderBackground" value="0 0 0 0.35" />
+    </Presets>
+
+    <Profile name="ingameMenuMyHeaderRight" extends="baseReference">
+        <!-- <size value="155px 32px" /> -->
+        <imageColor value="0 0 0 0" />
+        <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textColor value="$preset_colorWhite_50" />
+        <textAlignment value="right" />
+        <textDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+
+    <Profile name="ingameMenuMyHeaderLeft" extends="baseReference">
+        <!-- <size value="155px 32px" /> -->
+        <imageColor value="0 0 0 0" />
+        <textFocusedColor value="$preset_fs25_colorMainHighlight" />
+        <textHighlightedColor value="$preset_fs25_colorMainHighlight" />
+        <textSize value="16px" />
+        <textBold value="true" />
+        <textUpperCase value="true" />
+        <textColor value="$preset_colorWhite_50" />
+        <textAlignment value="left" />
+        <textDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+
+    <Profile name="ingameMenuMyList" extends="emptyPanel" with="anchorStretchingYLeft pivotTopLeft">
+        <!-- <position value="0px -40px" /> -->
+    </Profile>
+    
+    <Profile name="ingameMenuMyListItem" extends="baseReference" with="anchorTopStretchingX alternating">
+        <height value="32px"/>
+        <imageColor value="$preset_fs25_colorGrey" />
+        <imageSelectedColor value="$preset_fs25_colorMainHighlight" />
+        <alternateBackgroundColor value="$preset_fs25_colorGreyDark_50" />
+    </Profile> 
+
+    <Profile name="ingameMenuMyRowCellLeft" extends="baseReference" with="anchorStretchingYLeft">
+        <!-- <size value="155px 32px" /> -->
+        <textBold value="false" />
+        <textSize value="15px" />
+        <textAlignment value="left" />
+        <textColor value="$preset_fs25_colorMainLight" />
+        <textSelectedColor value="$preset_fs25_colorMainDark" />
+        <textDisabledColor value="$preset_colorDisabled" />
+    </Profile>
+
+    <Profile name="ingameMenuMyRowCellRight" extends="ingameMenuMyRowCellLeft">
+        <textAlignment value="right" />
+    </Profile>
+
+    <Profile name="ingameMenuMyHeaderBox" extends="emptyPanel" with="anchorTopLeft">
+        <!-- <size value="1400px 50px"/> -->
+        <alignmentX value="left"/>
+        <alignmentY value="middle"/>
+        <imageColor value="$preset_colorListHeaderBackground"/>
+        <flowDirection value="horizontal"/>
+        <wrapAround value="true"/>
+        <lateralFlowSize value="200px"/>
+        <fitToElements value="false"/>
+        <autoValidateLayout value="true"/>
+        <hasFrame value="false"/>    
+    </Profile>
+    
+    <Profile name="ingameMenuMyRowSectionLeft" extends="baseReference" with="anchorStretchingYLeft">
+        <!-- <size value="155px 32px" /> -->
+        <textBold value="false" />
+        <textSize value="15px" />
+        <textAlignment value="left" />
+        <textColor value="$preset_colorWhite" />
+        <textSelectedColor value="$preset_colorWhite" />
+        <textDisabledColor value="$preset_colorWhite" />
+    </Profile>
+
+    <Profile name="ingameMenuMyRowCellImage" extends="baseReference" with="anchorMiddleLeft">
+        <size value="24px 24px" />
+        <position value="8px 0" />
+        <imageSliceId value="noSlice" />
+    </Profile>
+
+</GUIProfiles>

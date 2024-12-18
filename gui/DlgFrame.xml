@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg" />
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" size="1110px 800px">        
+        <ThreePartBitmap profile="fs25_dialogBgMiddle" />
+        <ThreePartBitmap profile="fs25_dialogBgTop" />
+        <ThreePartBitmap profile="fs25_dialogBgBottom" />
+        <GuiElement profile="fs25_dialogContentContainer">
+            <Text profile="dialogTitle" text="$l10n_ui_animalFoodDlg_title" id="dialogTitleElement" position="0px -30px" />
+
+            <!-- Main list -->
+            <Bitmap profile="ingameMenuMyList" id="tableHeaderBox" position="45px -90px" size="710px 50px">
+                <Text profile="ingameMenuMyHeaderLeft" position="10px -0px" size="180px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodGroup"/>
+                <Text profile="ingameMenuMyHeaderRight" position="140px -0px" size="130px 40.77px" text="$l10n_ui_animalFoodDlg_header_ProductionWeight"/>
+                <Text profile="ingameMenuMyHeaderRight" position="260px -0px" size="100px 40.77px" text="$l10n_ui_animalFoodDlg_header_EatWeight"/>
+                <Text profile="ingameMenuMyHeaderLeft" position="380px -0px" size="300px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodTypes"/>
+                <ThreePartBitmap profile="fs25_lineSeparatorBottom" position="0px 2px" />
+            </Bitmap>
+
+
+            <SmoothList profile="ingameMenuMyList" id="overviewTable" position="50px -145px" size="700px 550px" focusInit="onOpen" focusChangeTop="nil" focusChangeBottom="nil" listSectionHeader="section">
+                <ListItem profile="ingameMenuMyListItem"  name="orderRowTemplate" size="770px 40.77px">
+                    <Text profile="ingameMenuMyRowCellLeft" position="45px 0px" size="180px 40.77px" name="FoodGroup" />
+                    <Text profile="ingameMenuMyRowCellRight" position="180px 0px" size="110px 40.77px" name="ProductionWeight"/>
+                    <Text profile="ingameMenuMyRowCellRight" position="300px 0px" size="80px 40.77px" name="EatWeight"/>
+                    <Text profile="ingameMenuMyRowCellLeft" position="410px 0px" size="300px 40.77px" name="FoodTypes" textLayoutMode="scrolling"/>
+                </ListItem>
+                <ListItem profile="ingameMenuMyListItem" name="section" imageColor="0 0 0 0.35">
+                    <Text profile="ingameMenuMyRowSectionLeft" name="title" textSize="18px" size="305px 40.77px"/>
+                </ListItem>
+            </SmoothList>
+
+            <ThreePartBitmap profile="fs25_listSliderBox" position="-320px -60px" size="12px 555px" with="anchorTopRight">
+                <Slider profile="fs25_listSlider" size="6px 547px" dataElementId="overviewTable" id="tableSlider" />
+            </ThreePartBitmap>  
+
+            <!-- Detail list -->
+            <Text profile="dialogTitle" text="$l10n_ui_animalFoodDlg_sidebar_title" id="detailDialogTitleElement" position="340px -110px"/>
+
+            <Bitmap profile="ingameMenuMyList" id="tableHeaderBox" position="770px -130px" size="280px 50px">
+                <Text profile="ingameMenuMyHeaderLeft" id="detailHeader" position="10px -0px" size="200px 40.77px" text="Alle Futterarten"/>
+                <ThreePartBitmap profile="fs25_lineSeparatorBottom" position="0px 2px" />
+            </Bitmap>
+
+            <SmoothList profile="ingameMenuMyList" id="overviewTableDetail" handleFocus="false" selectedWithoutFocus="false" position="720px -180px" size="380px 450px">
+                <ListItem profile="ingameMenuMyListItem"  name="orderRowTemplate" size="270px 40.77px">
+                    <Bitmap profile="ingameMenuMyRowCellImage" name="fillTypeIcon" />
+                    <Text profile="ingameMenuMyRowCellLeft" position="40px 0px" size="250px 40.77px" name="FoodType" />
+                </ListItem>
+            </SmoothList>
+
+            <!-- <ThreePartBitmap profile="fs25_listSliderBox" position="-25px -100px" size="12px 350px" with="anchorTopRight">
+                <Slider profile="fs25_listSlider" size="6px 342px" dataElementId="overviewTableDetail" id="tableSliderDetail" />
+            </ThreePartBitmap>   -->
+        </GuiElement>
+
+        <!-- Buttons -->
+        <BoxLayout profile="fs25_dialogButtonBox" size="1050px 60px">
+            <Button profile="buttonBack" text="$l10n_ui_animalFoodDlg_btnClose" onClick="onClickBack" />
+            <Button profile="buttonExtra1" text="$l10n_ui_animalFoodDlg_btnMix" onClick="onClickShowMixtureRecipes"/>
+        </BoxLayout>
+    </GuiElement>
+</GUI>

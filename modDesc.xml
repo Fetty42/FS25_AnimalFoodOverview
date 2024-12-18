@@ -1,0 +1,230 @@
+<modDesc descVersion="94">
+	<author>Fetty42</author>
+	<version>1.0.0.0</version>
+	<title>
+        <en>Animal Food Overview</en>
+		<de>Tierfutter Übersicht</de>
+		<fr>Tableau Alimentation Animale</fr>
+        <it>Panoramica Degli Alimenti Per Animali</it>
+    </title>
+    <description>
+        <de><![CDATA[Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
+
+Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview oder https://forum.giants-software.com/viewtopic.php?t=208708]]></de>
+		<en><![CDATA[With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview or https://forum.giants-software.com/viewtopic.php?t=208708]]></en>
+		<fr><![CDATA[Avec ce MOD, vous pouvez afficher les différents groupes d'aliments et les types d'aliments qu'ils contiennent par espèce animale.
+
+Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS22_AnimalFoodOverview ou https://forum.giants-software.com/viewtopic.php?t=208708]]></fr>
+        <it><![CDATA[Con questo MOD puoi visualizzare i rispettivi gruppi alimentari e i tipi di alimenti contenuti in essi per ogni specie animale.
+
+Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS22_AnimalFoodOverview o https://forum.giants-software.com/viewtopic.php?t=208708]]></it>
+    </description>
+	
+	<iconFilename>icon_AnimalFoodOverview.dds</iconFilename>
+	<multiplayer supported="true" />
+	<extraSourceFiles>
+		<sourceFile filename="AnimalFoodOverview.lua" />
+		<sourceFile filename="RegisterPlayerActionEvents.lua" />
+	</extraSourceFiles>
+	<actions>
+      	<action name="ShowAnimalFoodDlg" category="SYSTEM" />
+  	</actions>	
+  	<inputBinding>
+      	<actionBinding action="ShowAnimalFoodDlg">
+        	<binding device="KB_MOUSE_DEFAULT" input="KEY_rctrl KEY_rshift KEY_f" />
+      	</actionBinding>
+  	</inputBinding>	
+	<l10n>
+		<text name="input_ShowAnimalFoodDlg">
+			<de>Übersicht der Tierfütterung anzeigen</de>
+			<en>Show Animal Food Overview</en>
+			<ru>Обзор кормов</ru>
+			<cz>Zobrazit přehled krmiva pro zvířata</cz>
+			<fr>Affichage du tableau d'alimentation animale</fr>
+            <it>Mostra Panoramica degli Alimenti per Animali</it>
+		</text>
+
+	<!-- Dlg -->
+        <text name="ui_animalFoodDlg_title">
+			<de>Übersicht der Tierfütterung</de>
+			<en>Animal Food Overview</en>
+			<ru>Обзор кормов для животных</ru>
+			<cz>Přehled krmiv pro zvířata</cz>
+			<fr>Tableau Alimentation Animale</fr>
+        	<it>Panoramica dell'Alimentazione Animale</it>
+		</text>		
+        <text name="ui_animalFoodDlg_header_FoodGroup">
+			<de>Futtergruppen</de>	
+			<en>Food Group</en>
+			<ru>Группа кормов</ru>
+			<cz>Skupiny potravin</cz>
+			<fr>Groupe alimentaire</fr>
+        	<it>Gruppo Alimentare</it>
+        </text>		
+        <text name="ui_animalFoodDlg_header_ProductionWeight">
+			<de>Prod.-Gew.</de>	
+			<en>Prod. Weight</en>
+			<ru>Удел. вес</ru>
+			<cz>Prod. Hmotn.</cz>
+			<fr>Ratio Prod</fr>
+       		<it>Peso Prod.</it>
+        </text>		
+        <text name="ui_animalFoodDlg_header_EatWeight">
+			<de>Fress-Gew.</de>
+			<en>Eat Weight</en>
+			<ru>Корм. вес</ru>
+			<cz>Hmotnost</cz>
+			<fr>Ratio Alim.</fr>
+        	<it>Peso Alim.</it>
+        </text>		
+        <text name="ui_animalFoodDlg_header_FoodTypes">
+			<de>Futtersorten</de>
+			<en>Food Types</en>
+			<ru>Типы кормов</ru>
+			<cz>Typy potravin</cz>
+			<fr>Types Aliments</fr>
+        	<it>Tipi di Alimenti</it>
+        </text>		
+        <text name="ui_animalFoodDlg_btnClose">
+			<de>Schließen</de>	
+			<en>Close</en>
+			<ru>Закрыть</ru>
+			<cz>Zavřít</cz>
+			<fr>Fermer</fr>
+        	<it>Chiudi</it>
+		</text>		
+        <text name="ui_animalFoodDlg_btnMix">
+			<de>Mixtur-Rezepte anzeigen</de>	
+			<en>Show Mixture Recipes</en>
+			<ru>Показать рецепты смесей</ru>
+			<cz>Zobrazit recepty na směsi</cz>
+			<fr>Afficher Recettes Rations</fr>
+        	<it>Mostra Ricette delle Miscele</it>
+		</text>		
+        <text name="ui_animalFoodDlg_sidebar_title">
+			<de>Alle Futterarten</de>
+			<en>All Food Types</en>
+			<ru>Все типы кормов</ru>
+			<cz>Všechny typy potravin</cz>
+			<fr>Types Aliments (Tous)</fr>
+        	<it>Tutti i Tipi di Alimenti</it>
+		</text>		
+	<!-- Dlg mixtures-->
+        <text name="ui_mixturesDlg_title">
+			<de>Übersicht der Mixtur-Rezepte</de>
+			<en>Mixture Recipes Overview</en>
+			<ru>Обзор рецептов смесей</ru>
+			<cz>Přehled receptů na směsi</cz>
+			<fr>Synthèse Recettes Rations</fr>
+        	<it>Panoramica delle Ricette delle Miscele</it>
+		</text>		
+        <text name="ui_mixturesDlg_header_IngredientTitle">
+			<de>Bestandteil</de>
+			<en>Ingredient</en>
+			<ru>Компонент</ru>
+			<cz>Přísady</cz>
+			<fr>Ingrédient</fr>
+        	<it>Ingrediente</it>
+        </text>		
+        <text name="ui_mixturesDlg_header_Min">
+			<de>Min.</de>
+			<en>Min.</en>
+			<ru>Мин.</ru>
+			<cz>Min.</cz>
+			<fr>Min.</fr>
+        	<it>Min.</it>
+        </text>		
+        <text name="ui_mixturesDlg_header_Max">
+			<de>Max.</de>
+			<en>Max.</en>
+			<ru>Макс.</ru>
+			<cz>Max.</cz>
+			<fr>Max.</fr>
+        	<it>Max.</it>
+        </text>		
+        <text name="ui_mixturesDlg_header_FillTypeTitles">
+			<de>Mögliche Futterarten</de>
+			<en>Possible forage types</en>
+			<ru>Возможные типы кормов</ru>
+			<cz>Možné druhy píce</cz>
+			<fr>Types Fourrages</fr>
+        	<it>Tipi di Foraggi Possibili</it>
+        </text>		
+	<!-- Text -->
+        <text name="txt_Parallel">
+			<de>parallel</de>
+			<en>parallel</en>
+			<ru>паралельный</ru>
+			<cz>soubežné</cz>
+			<fr>Parallèle</fr>
+        	<it>parallelo</it>
+        </text>		
+        <text name="txt_sequentiel">
+			<de>sequentiell</de>
+			<en>sequential</en>
+			<ru>последовательный</ru>
+			<cz>Sekvenční</cz>
+			<fr>Série</fr>
+        	<it>sequenziale</it>
+        </text>		
+        <text name="txt_horse">
+			<de>Pferd</de>
+			<en>Horse</en>
+			<ru>Лошади</ru>
+			<cz>Kůň</cz>
+			<fr>Chevaux</fr>
+        	<it>Cavallo</it>
+        </text>		
+        <text name="txt_pig">
+			<de>Schwein</de>
+			<en>Pig</en>
+			<ru>Свиньи</ru>
+			<cz>Prase</cz>
+			<fr>Cochons</fr>
+        	<it>Maiale</it>
+        </text>		
+        <text name="txt_cow">
+			<de>Kuh</de>
+			<en>Cow</en>
+			<ru>Коровы</ru>
+			<cz>Kráva</cz>
+			<fr>Vaches</fr>
+        	<it>Mucca</it>
+        </text>		
+        <text name="txt_sheep">
+			<de>Schaf</de>
+			<en>Sheep</en>
+			<ru>Овцы</ru>
+			<cz>Ovce</cz>
+			<fr>Moutons</fr>
+        	<it>Pecora</it>
+        </text>		
+        <text name="txt_chicken">
+			<de>Huhn</de>
+			<en>Chicken</en>
+			<ru>Куры</ru>
+			<cz>Kuře</cz>
+			<fr>Volailles</fr>
+			<it>Pollo</it>
+        </text>		
+        <text name="txt_goat">
+			<de>Ziege</de>
+			<en>Goat</en>
+			<ru>Коза</ru>
+			<cz>Kozí</cz>
+			<fr>Chèvre</fr>
+			<it>Capra</it>
+        </text>		
+        <text name="txt_haycow">
+			<de>Heukuh</de>
+			<en>Haycow</en>
+			<ru>Корова на сене</ru>
+			<cz>Kráva na seno</cz>
+			<fr>Vache à foin</fr>
+			<it>Mucca da fieno</it>
+        </text>		
+
+	</l10n>
+</modDesc>
