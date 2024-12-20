@@ -2,8 +2,8 @@
 -- Date: 09.12.2024
 -- Version: 1.0.0.0
 
-local dbPrintfOn = true
-local dbInfoPrintfOn = true
+local dbPrintfOn = false
+local dbInfoPrintfOn = false
 
 local function dbInfoPrintf(...)
 	if dbInfoPrintfOn then
