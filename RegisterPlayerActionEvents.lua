@@ -2,7 +2,7 @@
 -- Date: 08.12.2024
 -- Version: 1.0.0.0
 
-local isDbPrintfOn = true
+local isDbPrintfOn = false
 
 -- Function to print debug messages if debugging is enabled
 -- Usage: dbPrintf("Message: %s", message)
@@ -26,7 +26,7 @@ dbPrintf("    FS25_AnimalFoodOverview: register global player action events")
 PlayerInputComponent.registerGlobalPlayerActionEvents = Utils.appendedFunction(
     PlayerInputComponent.registerGlobalPlayerActionEvents,
     function(self, controlling)
-        if controlling ~= "VEHICLE" or true then
+        if controlling ~= "VEHICLE" then
             local triggerUp, triggerDown, triggerAlways, startActive, callbackState, disableConflictingBindings = false, true, false, true, nil, true
 
             local success, actionEventId, otherEvents = g_inputBinding:registerActionEvent(InputAction.ShowAnimalFoodDlg, AnimalFoodOverview, AnimalFoodOverview.ShowAnimalFoodDlg, triggerUp, triggerDown, triggerAlways, startActive, callbackState, disableConflictingBindings);
