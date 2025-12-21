@@ -56,36 +56,37 @@ function DlgFrame:onOpen()
 	self.overviewTableData = {}
 	DlgFrame.mixFillTypeIdxToAnimalTitle = {}
 	
-	local animalNames = {}
-	animalNames[AnimalType.COW]=g_i18n:getText("txt_cow")
-	animalNames[AnimalType.CHICKEN]=g_i18n:getText("txt_chicken")
-	animalNames[AnimalType.SHEEP]=g_i18n:getText("txt_sheep")
-    animalNames[AnimalType.PIG]=g_i18n:getText("txt_pig")
-	animalNames[AnimalType.HORSE]=g_i18n:getText("txt_horse")
-	if AnimalType.GOAT ~= nil then
-		animalNames[AnimalType.GOAT]=g_i18n:getText("txt_goat")
-	end
-	if AnimalType.HAYCOW ~= nil then
-		animalNames[AnimalType.HAYCOW]=g_i18n:getText("txt_haycow")
-	end
+	-- local animalNames = {}
+	-- animalNames[AnimalType.COW]=g_i18n:getText("txt_cow")
+	-- animalNames[AnimalType.CHICKEN]=g_i18n:getText("txt_chicken")
+	-- animalNames[AnimalType.SHEEP]=g_i18n:getText("txt_sheep")
+    -- animalNames[AnimalType.PIG]=g_i18n:getText("txt_pig")
+	-- animalNames[AnimalType.HORSE]=g_i18n:getText("txt_horse")
+	-- if AnimalType.GOAT ~= nil then
+	-- 	animalNames[AnimalType.GOAT]=g_i18n:getText("txt_goat")
+	-- end
+	-- if AnimalType.HAYCOW ~= nil then
+	-- 	animalNames[AnimalType.HAYCOW]=g_i18n:getText("txt_haycow")
+	-- end
 	
 	for _, animalFood in pairs(g_currentMission.animalFoodSystem.animalFood) do
-		local animalName = animalNames[animalFood.animalTypeIndex]
+		local animalType = g_currentMission.animalSystem:getTypeByIndex(animalFood.animalTypeIndex)
+        local animalName = animalType.groupTitle
 		
 		-- fix for other animals to not show nil in the dialog. Use either the filltype name which belongs to it or the type name itself
-		if animalName == nil then
-			local animalType = g_currentMission.animalSystem:getTypeByIndex(animalFood.animalTypeIndex)
+		-- if animalName == nil then
+		-- 	local animalType = g_currentMission.animalSystem:getTypeByIndex(animalFood.animalTypeIndex)
 			
-			if animalType.name ~= nil then
-				local fillType = g_fillTypeManager:getFillTypeByName(animalType.name)
-				if fillType ~= nil then
-					animalNames[animalFood.animalTypeIndex] = fillType.title
-				else
-					animalNames[animalFood.animalTypeIndex] = animalType.name
-				end
-				animalName = animalNames[animalFood.animalTypeIndex];
-			end
-		end
+		-- 	if animalType.name ~= nil then
+		-- 		local fillType = g_fillTypeManager:getFillTypeByName(animalType.name)
+		-- 		if fillType ~= nil then
+		-- 			animalNames[animalFood.animalTypeIndex] = fillType.title
+		-- 		else
+		-- 			animalNames[animalFood.animalTypeIndex] = animalType.name
+		-- 		end
+		-- 		animalName = animalNames[animalFood.animalTypeIndex];
+		-- 	end
+		-- end
 
 		local animalNameForSection = animalName
 

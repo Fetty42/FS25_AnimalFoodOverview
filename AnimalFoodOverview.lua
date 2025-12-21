@@ -17,9 +17,21 @@ local function dbPrintf(...)
 	end
 end
 
-local function dbPrintHeader(ftName)
+local function dbPrint(...)
 	if dbPrintfOn then
-    	print(string.format("Call %s: g_currentMission:getIsServer()=%s | g_currentMission:getIsClient()=%s", ftName, g_currentMission:getIsServer(), g_currentMission:getIsClient()))
+    	print(...)
+	end
+end
+
+local function dbPrintHeader(funcName)
+	if dbPrintfOn then
+		if g_currentMission ~=nil and g_currentMission.missionDynamicInfo ~=nil then
+			print(string.format("Call %s: isDedicatedServer=%s | isServer()=%s | isMasterUser=%s | isMultiplayer=%s | isClient()=%s | farmId=%s", 
+							funcName, tostring(g_dedicatedServer~=nil), tostring(g_currentMission:getIsServer()), tostring(g_currentMission.isMasterUser), tostring(g_currentMission.missionDynamicInfo.isMultiplayer), tostring(g_currentMission:getIsClient()), tostring(g_currentMission:getFarmId())))
+		else
+			print(string.format("Call %s: isDedicatedServer=%s | g_currentMission=%s",
+							funcName, tostring(g_dedicatedServer~=nil), tostring(g_currentMission)))
+		end
 	end
 end
 
@@ -32,6 +44,10 @@ AnimalFoodOverview.dir = g_currentModDirectory
 AnimalFoodOverview.modName = g_currentModName
 
 AnimalFoodOverview.dlg			= nil
+
+AnimalFoodOverview.animalSound = createSample("animalSound")
+loadSample(AnimalFoodOverview.animalSound, "data/sounds/ui/uiAnimals.ogg", false)
+
 
 source(AnimalFoodOverview.dir .. "gui/DlgFrame.lua")
 
@@ -70,6 +86,8 @@ end
 --
 function AnimalFoodOverview:ShowAnimalFoodDlg(actionName, keyStatus, arg3, arg4, arg5)
     dbPrintHeader("AnimalFoodOverview:ShowAnimalFoodDlg()")
+
+	playSample(AnimalFoodOverview.animalSound ,1 ,1 ,1 ,0 ,0)
 
 	AnimalFoodOverview.dlg = nil
 	g_gui:loadProfiles(AnimalFoodOverview.dir .. "gui/guiProfiles.xml")

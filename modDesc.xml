@@ -1,6 +1,6 @@
-<modDesc descVersion="94">
+<modDesc descVersion="105">
 	<author>Fetty42</author>
-	<version>1.0.0.0</version>
+	<version>1.1.0.0</version>
 	<title>
         <en>Animal Food Overview</en>
 		<de>Tierfutter Übersicht</de>
@@ -10,17 +10,41 @@
     <description>
         <de><![CDATA[Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
 
+Update 1.1.0:
+- Animal-Sound abspielen wenn der Dialog geöffnet wird
+- Optimierung des Anzeigenamens für die Tierarten
+- kleinere GUI Optimierungen
+
+
 Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues oder https://forum.giants-software.com/viewtopic.php?t=208708]]></de>
 
 		<en><![CDATA[With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+Update 1.1.0:
+- Play animal sound when the dialog is opened
+- Optimization of the display name for the animal species
+- small GUI optimizations
+
 
 For error messages or suggestions please visit: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues or https://forum.giants-software.com/viewtopic.php?t=208708]]></en>
 
 		<fr><![CDATA[Avec ce MOD, vous pouvez afficher les différents groupes d'aliments et les types d'aliments qu'ils contiennent par espèce animale.
 
+Update 1.1.0:
+- Lecture du son de l'animal lorsque la boîte de dialogue est ouverte
+- Optimisation du nom d'affichage pour les espèces animales
+- petites optimisations de l'interface graphique
+
+
 Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS25_AnimalFoodOverview/issues ou https://forum.giants-software.com/viewtopic.php?t=208708]]></fr>
 
 		<it><![CDATA[Con questo MOD puoi visualizzare i rispettivi gruppi alimentari e i tipi di alimenti contenuti in essi per ogni specie animale.
+
+Update 1.1.0:
+- Riproduci il suono dell'animale quando viene aperta la finestra di dialogo
+- Ottimizzazione del nome visualizzato per le specie animali
+- piccole ottimizzazioni della GUI
+
 
 Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues o https://forum.giants-software.com/viewtopic.php?t=208708]]></it>
     </description>
@@ -159,7 +183,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
         <text name="txt_Parallel">
 			<de>parallel</de>
 			<en>parallel</en>
-			<ru>паралельный</ru>
+			<ru>параллельный</ru>
 			<cz>soubežné</cz>
 			<fr>Parallèle</fr>
         	<it>parallelo</it>
@@ -216,13 +240,13 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<de>Ziege</de>
 			<en>Goat</en>
 			<ru>Коза</ru>
-			<cz>Kozí</cz>
+			<cz>Koza</cz>
 			<fr>Chèvre</fr>
 			<it>Capra</it>
         </text>		
         <text name="txt_haycow">
 			<de>Heukuh</de>
-			<en>Haycow</en>
+			<en>Hay Cow</en>
 			<ru>Корова на сене</ru>
 			<cz>Kráva na seno</cz>
 			<fr>Vache à foin</fr>
