@@ -6,6 +6,7 @@
 		<de>Tierfutter Übersicht</de>
 		<fr>Tableau Alimentation Animale</fr>
         <it>Panoramica Degli Alimenti Per Animali</it>
+        <pl>Przegląd żywienia zwierząt</pl>
     </title>
     <description>
         <de><![CDATA[Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
@@ -71,6 +72,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Zobrazit přehled krmiva pro zvířata</cz>
 			<fr>Affichage du tableau d'alimentation animale</fr>
             <it>Mostra Panoramica degli Alimenti per Animali</it>
+			<pl>Pokaż Przegląd żywienia zwierząt</pl>
 		</text>
 
 	<!-- Dlg -->
@@ -81,6 +83,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Přehled krmiv pro zvířata</cz>
 			<fr>Tableau Alimentation Animale</fr>
         	<it>Panoramica dell'Alimentazione Animale</it>
+			<pl>Przegląd żywienia zwierząt</pl>
 		</text>		
         <text name="ui_animalFoodDlg_header_FoodGroup">
 			<de>Futtergruppen</de>	
@@ -89,6 +92,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Skupiny potravin</cz>
 			<fr>Groupe alimentaire</fr>
         	<it>Gruppo Alimentare</it>
+			<pl>Grupy żywności</pl>
         </text>		
         <text name="ui_animalFoodDlg_header_ProductionWeight">
 			<de>Prod.-Gew.</de>	
@@ -97,6 +101,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Prod. Hmotn.</cz>
 			<fr>Ratio Prod</fr>
        		<it>Peso Prod.</it>
+			<plProd.</pl>
         </text>		
         <text name="ui_animalFoodDlg_header_EatWeight">
 			<de>Fress-Gew.</de>
@@ -105,6 +110,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Hmotnost</cz>
 			<fr>Ratio Alim.</fr>
         	<it>Peso Alim.</it>
+			<pl>Spoż.</pl>
         </text>		
         <text name="ui_animalFoodDlg_header_FoodTypes">
 			<de>Futtersorten</de>
@@ -113,6 +119,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Typy potravin</cz>
 			<fr>Types Aliments</fr>
         	<it>Tipi di Alimenti</it>
+			<pl>Rodzaje żywności</pl>
         </text>		
         <text name="ui_animalFoodDlg_btnClose">
 			<de>Schließen</de>	
@@ -121,6 +128,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Zavřít</cz>
 			<fr>Fermer</fr>
         	<it>Chiudi</it>
+			<pl>Zamknij</pl>
 		</text>		
         <text name="ui_animalFoodDlg_btnMix">
 			<de>Mixtur-Rezepte anzeigen</de>	
@@ -129,6 +137,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Zobrazit recepty na směsi</cz>
 			<fr>Afficher Recettes Rations</fr>
         	<it>Mostra Ricette delle Miscele</it>
+			<pl>Pokaż recepturę mieszania</pl>
 		</text>		
         <text name="ui_animalFoodDlg_sidebar_title">
 			<de>Alle Futterarten</de>
@@ -137,6 +146,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Všechny typy potravin</cz>
 			<fr>Types Aliments (Tous)</fr>
         	<it>Tutti i Tipi di Alimenti</it>
+			<pl>Wszystkie rodzaje żywności</pl>
 		</text>		
 	<!-- Dlg mixtures-->
         <text name="ui_mixturesDlg_title">
@@ -146,6 +156,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Přehled receptů na směsi</cz>
 			<fr>Synthèse Recettes Rations</fr>
         	<it>Panoramica delle Ricette delle Miscele</it>
+			<pl>Przegląd receptur mieszania</pl>
 		</text>		
         <text name="ui_mixturesDlg_header_IngredientTitle">
 			<de>Bestandteil</de>
@@ -154,6 +165,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Přísady</cz>
 			<fr>Ingrédient</fr>
         	<it>Ingrediente</it>
+			<pl>Składnik</pl>
         </text>		
         <text name="ui_mixturesDlg_header_Min">
 			<de>Min.</de>
@@ -162,6 +174,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Min.</cz>
 			<fr>Min.</fr>
         	<it>Min.</it>
+			<pl>min.</pl>
         </text>		
         <text name="ui_mixturesDlg_header_Max">
 			<de>Max.</de>
@@ -170,6 +183,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Max.</cz>
 			<fr>Max.</fr>
         	<it>Max.</it>
+			<pl>max.</pl>
         </text>		
         <text name="ui_mixturesDlg_header_FillTypeTitles">
 			<de>Mögliche Futterarten</de>
@@ -178,6 +192,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Možné druhy píce</cz>
 			<fr>Types Fourrages</fr>
         	<it>Tipi di Foraggi Possibili</it>
+			<pl>Możliwe rodzaje paszy</pl>
         </text>		
 	<!-- Text -->
         <text name="txt_Parallel">
@@ -187,6 +202,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>soubežné</cz>
 			<fr>Parallèle</fr>
         	<it>parallelo</it>
+			<pl>równolegle</pl>
         </text>		
         <text name="txt_sequentiel">
 			<de>sequentiell</de>
@@ -195,6 +211,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Sekvenční</cz>
 			<fr>Série</fr>
         	<it>sequenziale</it>
+			<pl>sekwencyjnie</pl>
         </text>		
         <text name="txt_horse">
 			<de>Pferd</de>
@@ -203,6 +220,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Kůň</cz>
 			<fr>Chevaux</fr>
         	<it>Cavallo</it>
+			<pl>Koń</pl>
         </text>		
         <text name="txt_pig">
 			<de>Schwein</de>
@@ -211,6 +229,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Prase</cz>
 			<fr>Cochons</fr>
         	<it>Maiale</it>
+			<pl>Świnia</pl>
         </text>		
         <text name="txt_cow">
 			<de>Kuh</de>
@@ -219,6 +238,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Kráva</cz>
 			<fr>Vaches</fr>
         	<it>Mucca</it>
+			<pl>Krowa</pl>
         </text>		
         <text name="txt_sheep">
 			<de>Schaf</de>
@@ -227,6 +247,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Ovce</cz>
 			<fr>Moutons</fr>
         	<it>Pecora</it>
+			<pl>Owca</pl>
         </text>		
         <text name="txt_chicken">
 			<de>Huhn</de>
@@ -235,6 +256,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Kuře</cz>
 			<fr>Volailles</fr>
 			<it>Pollo</it>
+			<pl>Kura</pl>
         </text>		
         <text name="txt_goat">
 			<de>Ziege</de>
@@ -243,6 +265,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Koza</cz>
 			<fr>Chèvre</fr>
 			<it>Capra</it>
+			<pl>Koza</pl>
         </text>		
         <text name="txt_haycow">
 			<de>Heukuh</de>
@@ -251,6 +274,7 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<cz>Kráva na seno</cz>
 			<fr>Vache à foin</fr>
 			<it>Mucca da fieno</it>
+			<pl>Krowa pastwiskowa</pl>
         </text>		
 
 	</l10n>
