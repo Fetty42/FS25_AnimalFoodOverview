@@ -99,6 +99,14 @@ function DlgFrame:onOpen()
             -- subType.visuals[].store.name
             animalSubTypeName = string.format("%s - %s(>= %s)", animalName, DlgFrame:GetVisualAnimalTitleByAge(animalSubType, animalFood.minAge), animalFood.minAge)
 			animalNameForSection = animalSubTypeName
+        elseif (animalFood.minAge ~= nil and animalFood.minAge > 0)
+            or animalFood.maxAge ~= nil then
+            -- Animalic-style age bucket: minAge / maxAge attributes on <animal>
+            -- without a subType. Catch-all entries (both nil) keep the plain
+            -- animalName so they don't get a redundant "[0..∞]" suffix.
+            local lo = tostring(animalFood.minAge or 0)
+            local hi = animalFood.maxAge ~= nil and tostring(animalFood.maxAge) or "∞"
+            animalNameForSection = string.format("%s [%s..%s mo]", animalName, lo, hi)
         end
 
 		local sectionText = string.format("%s (%s)", animalNameForSection, (animalFood.consumptionType == 1) and g_i18n:getText("txt_sequentiel") or g_i18n:getText("txt_Parallel"))
