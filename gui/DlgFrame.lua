@@ -92,7 +92,7 @@ function DlgFrame:onOpen()
             -- animalName so they don't get a redundant "[0..∞]" suffix.
             local lo = tostring(animalFood.minAge or 0)
             local hi = animalFood.maxAge ~= nil and tostring(animalFood.maxAge) or "∞"
-            animalNameForSection = string.format("%s [%s..%s mo]", animalName, lo, hi)
+            animalNameForSection = string.format("%s [%s..%s %s]", animalName, lo, hi, g_i18n:getText("txt_monthAbbrev"))
         end
 
 		local sectionText = string.format("%s (%s)", animalNameForSection, (animalFood.consumptionType == 1) and g_i18n:getText("txt_sequentiel") or g_i18n:getText("txt_Parallel"))

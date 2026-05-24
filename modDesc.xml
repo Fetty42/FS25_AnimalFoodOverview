@@ -225,7 +225,16 @@ Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/F
 			<fr>Série</fr>
         	<it>sequenziale</it>
 			<pl>sekwencyjnie</pl>
-        </text>		
+        </text>
+        <text name="txt_monthAbbrev">
+			<de>Mo.</de>
+			<en>mo</en>
+			<ru>мес.</ru>
+			<cz>měs.</cz>
+			<fr>mois</fr>
+        	<it>mes.</it>
+			<pl>mies.</pl>
+        </text>
         <text name="txt_horse">
 			<de>Pferd</de>
 			<en>Horse</en>
