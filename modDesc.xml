@@ -7,6 +7,7 @@
 		<fr>Tableau Alimentation Animale</fr>
         <it>Panoramica Degli Alimenti Per Animali</it>
         <pl>Przegląd żywienia zwierząt</pl>
+        <pl>Przegląd żywienia zwierząt</pl>
     </title>
     <description>
         <de><![CDATA[<b>Tierfutter Übersicht</b> – Nachschlagewerk für die Fütterungsregeln deiner Karte
@@ -183,6 +184,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Affichage du tableau d'alimentation animale</fr>
             <it>Mostra Panoramica degli Alimenti per Animali</it>
 			<pl>Pokaż Przegląd żywienia zwierząt</pl>
+			<pl>Pokaż Przegląd żywienia zwierząt</pl>
 		</text>
 
 	<!-- Dlg -->
@@ -194,6 +196,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Tableau Alimentation Animale</fr>
         	<it>Panoramica dell'Alimentazione Animale</it>
 			<pl>Przegląd żywienia zwierząt</pl>
+			<pl>Przegląd żywienia zwierząt</pl>
 		</text>		
         <text name="ui_animalFoodDlg_header_FoodGroup">
 			<de>Futtergruppen</de>	
@@ -202,6 +205,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Skupiny potravin</cz>
 			<fr>Groupe alimentaire</fr>
         	<it>Gruppo Alimentare</it>
+			<pl>Grupy żywności</pl>
 			<pl>Grupy żywności</pl>
         </text>		
         <text name="ui_animalFoodDlg_header_ProductionWeight">
@@ -221,6 +225,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Ratio Alim.</fr>
         	<it>Peso Alim.</it>
 			<pl>Spoż.</pl>
+			<pl>Spoż.</pl>
         </text>		
         <text name="ui_animalFoodDlg_header_FoodTypes">
 			<de>Futtersorten</de>
@@ -229,6 +234,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Typy potravin</cz>
 			<fr>Types Aliments</fr>
         	<it>Tipi di Alimenti</it>
+			<pl>Rodzaje żywności</pl>
 			<pl>Rodzaje żywności</pl>
         </text>		
         <text name="ui_animalFoodDlg_btnClose">
@@ -239,6 +245,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Fermer</fr>
         	<it>Chiudi</it>
 			<pl>Zamknij</pl>
+			<pl>Zamknij</pl>
 		</text>		
         <text name="ui_animalFoodDlg_btnMix">
 			<de>Mixtur-Rezepte anzeigen</de>	
@@ -247,6 +254,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Zobrazit recepty na směsi</cz>
 			<fr>Afficher Recettes Rations</fr>
         	<it>Mostra Ricette delle Miscele</it>
+			<pl>Pokaż recepturę mieszania</pl>
 			<pl>Pokaż recepturę mieszania</pl>
 		</text>		
         <text name="ui_animalFoodDlg_sidebar_title">
@@ -267,6 +275,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Synthèse Recettes Rations</fr>
         	<it>Panoramica delle Ricette delle Miscele</it>
 			<pl>Przegląd receptur mieszania</pl>
+			<pl>Przegląd receptur mieszania</pl>
 		</text>		
         <text name="ui_mixturesDlg_header_IngredientTitle">
 			<de>Bestandteil</de>
@@ -275,6 +284,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Přísady</cz>
 			<fr>Ingrédient</fr>
         	<it>Ingrediente</it>
+			<pl>Składnik</pl>
 			<pl>Składnik</pl>
         </text>		
         <text name="ui_mixturesDlg_header_Min">
@@ -285,6 +295,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Min.</fr>
         	<it>Min.</it>
 			<pl>min.</pl>
+			<pl>min.</pl>
         </text>		
         <text name="ui_mixturesDlg_header_Max">
 			<de>Max.</de>
@@ -293,6 +304,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Max.</cz>
 			<fr>Max.</fr>
         	<it>Max.</it>
+			<pl>max.</pl>
 			<pl>max.</pl>
         </text>		
         <text name="ui_mixturesDlg_header_FillTypeTitles">
@@ -303,6 +315,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Types Fourrages</fr>
         	<it>Tipi di Foraggi Possibili</it>
 			<pl>Możliwe rodzaje paszy</pl>
+			<pl>Możliwe rodzaje paszy</pl>
         </text>		
 	<!-- Text -->
         <text name="txt_Parallel">
@@ -312,6 +325,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>soubežné</cz>
 			<fr>Parallèle</fr>
         	<it>parallelo</it>
+			<pl>równolegle</pl>
 			<pl>równolegle</pl>
         </text>		
         <text name="txt_sequentiel">
@@ -340,6 +354,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Chevaux</fr>
         	<it>Cavallo</it>
 			<pl>Koń</pl>
+			<pl>Koń</pl>
         </text>		
         <text name="txt_pig">
 			<de>Schwein</de>
@@ -348,6 +363,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Prase</cz>
 			<fr>Cochons</fr>
         	<it>Maiale</it>
+			<pl>Świnia</pl>
 			<pl>Świnia</pl>
         </text>		
         <text name="txt_cow">
@@ -358,6 +374,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Vaches</fr>
         	<it>Mucca</it>
 			<pl>Krowa</pl>
+			<pl>Krowa</pl>
         </text>		
         <text name="txt_sheep">
 			<de>Schaf</de>
@@ -366,6 +383,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Ovce</cz>
 			<fr>Moutons</fr>
         	<it>Pecora</it>
+			<pl>Owca</pl>
 			<pl>Owca</pl>
         </text>		
         <text name="txt_chicken">
@@ -376,6 +394,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Volailles</fr>
 			<it>Pollo</it>
 			<pl>Kura</pl>
+			<pl>Kura</pl>
         </text>		
         <text name="txt_goat">
 			<de>Ziege</de>
@@ -385,6 +404,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<fr>Chèvre</fr>
 			<it>Capra</it>
 			<pl>Koza</pl>
+			<pl>Koza</pl>
         </text>		
         <text name="txt_haycow">
 			<de>Heukuh</de>
@@ -393,6 +413,7 @@ W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_Ani
 			<cz>Kráva na seno</cz>
 			<fr>Vache à foin</fr>
 			<it>Mucca da fieno</it>
+			<pl>Krowa pastwiskowa</pl>
 			<pl>Krowa pastwiskowa</pl>
         </text>		
 
