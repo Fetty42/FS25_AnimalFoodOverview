@@ -9,11 +9,27 @@
         <pl>Przegląd żywienia zwierząt</pl>
     </title>
     <description>
-        <de><![CDATA[Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
+        <de><![CDATA[<b>Tierfutter Übersicht</b> – Nachschlagewerk für die Fütterungsregeln deiner Karte
+
+Auf vielen Karten und mit Tier-Mods weichen die Futterregeln vom Vanilla-Standard ab: andere Gruppenanteile, parallel statt sequentiell, zusätzliche FillTypes oder altersabhängiges Futter. Im Stall siehst du meist nur Füllstände – nicht, welche Futtersorten erlaubt sind und wie stark sie Produktion und Verbrauch beeinflussen.
+
+Diese Mod liest die aktive <b>animalFood.xml</b> direkt aus dem Spiel und zeigt pro Tierart alle Futtergruppen mit Produktions- und Fress-Gewicht, erlaubten Futtersorten sowie Mischfuttern (z. B. TMR, Schweinefutter). So erkennst du auf einen Blick, ob z. B. Kühe sequentiell (bestes Futter zuerst) oder Schweine parallel (ausgewogene Mischung) gefüttert werden müssen.
+
+<b>Funktionen</b>
+• Übersicht aller Tierarten mit Futtergruppen, Gewichten und Futtersorten
+• Detailansicht mit Icons für die gewählte Futtergruppe
+• Mixtur-Rezepte mit Min-/Max-Anteilen für die Mischstation
+• Anzeige von parallel / sequentiell und altersabhängigen Regeln (z. B. Animalic)
+• Mehrsprachig, Multiplayer-fähig (reine Client-Anzeige, kein Einfluss auf den Spielstand)
+
+<b>Steuerung:</b> Strg + Umschalt + F (in den Tastenbelegungen: „Übersicht der Tierfütterung anzeigen“)
+
+<b>Hinweis:</b> Es werden die Regeln der Karte/Mods angezeigt – keine Live-Werte aus Ställen (Füllstände, Ernährungsbalken).
 
 Update 1.2.0:
 - Rendern von tierischen Altersgruppen in den Abschnittstiteln (Dank an sashaman)
 - Alte FS22-TerraLife Unterstützung entfernt
+- Kleinere Dialog-Anpassungen
 
 Update 1.1.0:
 - Animal-Sound abspielen wenn der Dialog geöffnet wird
@@ -23,10 +39,27 @@ Update 1.1.0:
 
 Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues oder https://forum.giants-software.com/viewtopic.php?t=208708]]></de>
 
-		<en><![CDATA[With this MOD you can display the respective food groups and the food types contained in them per animal species.
+		<en><![CDATA[<b>Animal Food Overview</b> – reference guide for your map's feeding rules
+
+On many maps and with animal mods, feeding rules differ from vanilla: different group ratios, parallel instead of sequential feeding, extra fill types, or age-dependent diets. In the husbandry menu you usually see fill levels only – not which forage types are allowed or how they affect production and consumption.
+
+This mod reads the active <b>animalFood.xml</b> from the game and lists every animal type with food groups, production and eat weights, allowed fill types, and mixtures (e.g. TMR, pig feed). You can instantly see whether cows are fed sequentially (best food first) or pigs in parallel (balanced mix).
+
+<b>Features</b>
+• Overview of all animal types with food groups, weights, and forage types
+• Detail panel with icons for the selected food group
+• Mixture recipes with min/max ratios for the mixer wagon
+• Shows parallel vs. sequential feeding and age-based rules (e.g. Animalic)
+• Multilingual, multiplayer-ready (client-side display only, no savegame impact)
+
+<b>Controls:</b> Ctrl + Shift + F (rebindable: "Show Animal Food Overview")
+
+<b>Note:</b> Displays map/mod rules – not live husbandry data (fill levels, nutrition bars).
 
 Update 1.2.0:
 - Render Animalic-style age buckets in section titles (Thanks to sashaman)
+- Removed legacy FS22 TerraLife support
+- Minor dialog adjustments
 
 Update 1.1.0:
 - Play animal sound when the dialog is opened
@@ -36,10 +69,27 @@ Update 1.1.0:
 
 For error messages or suggestions please visit: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues or https://forum.giants-software.com/viewtopic.php?t=208708]]></en>
 
-		<fr><![CDATA[Avec ce MOD, vous pouvez afficher les différents groupes d'aliments et les types d'aliments qu'ils contiennent par espèce animale.
+		<fr><![CDATA[<b>Tableau Alimentation Animale</b> – guide de référence des règles d'alimentation de votre carte
+
+Sur de nombreuses cartes et avec des mods animaux, les règles d'alimentation diffèrent du jeu de base : parts de groupes différentes, alimentation parallèle ou séquentielle, types de remplissage supplémentaires ou rations selon l'âge. Dans le menu d'élevage, vous voyez surtout les niveaux de remplissage – pas quels fourrages sont autorisés ni leur impact sur la production et la consommation.
+
+Ce mod lit le fichier <b>animalFood.xml</b> actif du jeu et affiche chaque espèce avec ses groupes alimentaires, poids de production et d'alimentation, types de fourrage autorisés et mélanges (ex. ration totale, aliment porcin). Vous voyez immédiatement si les vaches sont nourries en série (meilleur aliment d'abord) ou les porcs en parallèle (mélange équilibré).
+
+<b>Fonctions</b>
+• Vue d'ensemble de toutes les espèces avec groupes, poids et types de fourrage
+• Panneau détaillé avec icônes pour le groupe sélectionné
+• Recettes de mélange avec parts min/max pour la mélangeuse
+• Affichage parallèle / séquentiel et règles par âge (ex. Animalic)
+• Multilingue, compatible multijoueur (affichage client uniquement, sans impact sur la sauvegarde)
+
+<b>Commandes :</b> Ctrl + Maj + F (reconfigurable : « Affichage du tableau d'alimentation animale »)
+
+<b>Remarque :</b> Affiche les règles de la carte/des mods – pas les données en direct des bâtiments (niveaux, barres nutrition).
 
 Update 1.2.0:
 - Rendu des groupes d'âge de style animal dans les titres de section (Merci à sashaman)
+- Suppression de l'ancienne prise en charge TerraLife FS22
+- Ajustements mineurs de la boîte de dialogue
 
 Update 1.1.0:
 - Lecture du son de l'animal lorsque la boîte de dialogue est ouverte
@@ -49,10 +99,27 @@ Update 1.1.0:
 
 Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS25_AnimalFoodOverview/issues ou https://forum.giants-software.com/viewtopic.php?t=208708]]></fr>
 
-		<it><![CDATA[Con questo MOD puoi visualizzare i rispettivi gruppi alimentari e i tipi di alimenti contenuti in essi per ogni specie animale.
+		<it><![CDATA[<b>Panoramica Alimentazione Animale</b> – guida di riferimento alle regole di alimentazione della mappa
+
+Su molte mappe e con mod animali, le regole di alimentazione differiscono dal vanilla: rapporti tra gruppi diversi, alimentazione parallela o sequenziale, fill type aggiuntivi o diete in base all'età. Nel menu allevamento si vedono soprattutto i livelli di riempimento – non quali foraggi sono ammessi né come influenzano produzione e consumo.
+
+Questa mod legge l'<b>animalFood.xml</b> attivo dal gioco e mostra ogni specie con gruppi alimentari, pesi di produzione e alimentazione, tipi di foraggio ammessi e miscele (es. TMR, mangime suino). Capisci subito se le mucche sono alimentate in sequenza (miglior cibo prima) o i maiali in parallelo (miscela equilibrata).
+
+<b>Funzioni</b>
+• Panoramica di tutte le specie con gruppi, pesi e tipi di foraggio
+• Pannello dettagli con icone per il gruppo selezionato
+• Ricette miscele con quote min/max per la miscelatrice
+• Mostra alimentazione parallela / sequenziale e regole per età (es. Animalic)
+• Multilingue, compatibile multiplayer (solo visualizzazione client, nessun impatto sul salvataggio)
+
+<b>Comandi:</b> Ctrl + Maiusc + F (riassegnabile: « Mostra Panoramica degli Alimenti per Animali »)
+
+<b>Nota:</b> Mostra le regole di mappa/mod – non i dati live degli allevamenti (livelli, barre nutrizione).
 
 Update 1.2.0:
 - Renderizzazione dei gruppi di età in stile animale nei titoli delle sezioni (Grazie a sashaman)
+- Rimossa la vecchia compatibilità TerraLife FS22
+- Piccole modifiche alla finestra di dialogo
 
 Update 1.1.0:
 - Riproduci il suono dell'animale quando viene aperta la finestra di dialogo
@@ -61,6 +128,36 @@ Update 1.1.0:
 
 
 Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues o https://forum.giants-software.com/viewtopic.php?t=208708]]></it>
+
+		<pl><![CDATA[<b>Przegląd żywienia zwierząt</b> – podręcznik zasad żywienia na Twojej mapie
+
+Na wielu mapach i z modami zwierzęcymi zasady żywienia odbiegają od vanilla: inne proporcje grup, żywienie równoległe zamiast sekwencyjnego, dodatkowe typy wypełnienia lub karma zależna od wieku. W menu hodowli widać głównie poziom zapełnienia – nie to, jakie pasze są dozwolone i jak wpływają na produkcję oraz zużycie.
+
+Ten mod odczytuje aktywny plik <b>animalFood.xml</b> z gry i pokazuje każdy gatunek z grupami paszy, wagami produkcji i spożycia, dozwolonymi typami paszy oraz mieszankami (np. TMR, pasza dla świń). Od razu widać, czy krowy są karmione sekwencyjnie (najlepsza pasza najpierw), czy świnie równolegle (zrównoważona mieszanka).
+
+<b>Funkcje</b>
+• Przegląd wszystkich gatunków z grupami, wagami i rodzajami paszy
+• Panel szczegółów z ikonami dla wybranej grupy
+• Receptury mieszanek z udziałami min/max dla mieszalnika
+• Wyświetlanie równoległe / sekwencyjne i zasad wiekowych (np. Animalic)
+• Wielojęzyczny, obsługa multiplayer (tylko wyświetlanie po stronie klienta, bez wpływu na zapis)
+
+<b>Sterowanie:</b> Ctrl + Shift + F (można zmienić: „Pokaż Przegląd żywienia zwierząt”)
+
+<b>Uwaga:</b> Pokazuje zasady mapy/modów – nie dane na żywo z budynków (poziomy, paski odżywienia).
+
+Update 1.2.0:
+- Wyświetlanie grup wiekowych zwierząt w tytułach sekcji (podziękowania dla sashaman)
+- Usunięto starsze wsparcie TerraLife z FS22
+- Drobne zmiany w oknie dialogowym
+
+Update 1.1.0:
+- Odtwarzanie dźwięku zwierzęcia po otwarciu okna dialogowego
+- Optymalizacja nazwy wyświetlanej dla gatunków zwierząt
+- Drobne optymalizacje interfejsu
+
+
+W przypadku błędów lub sugestii odwiedź: https://github.com/Fetty42/FS25_AnimalFoodOverview/issues lub https://forum.giants-software.com/viewtopic.php?t=208708]]></pl>
     </description>
 	
 	<iconFilename>icon_AnimalFoodOverview.dds</iconFilename>
