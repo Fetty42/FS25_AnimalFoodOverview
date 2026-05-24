@@ -47,11 +47,6 @@ function DlgFrame:onOpen()
 	dbPrintf("DlgFrame:onOpen()")
 	DlgFrame:superClass().onOpen(self)
 
-    -- Besonderheiten TerraLifePlus
-        --  Futter variiert pro SubType und Alter
-        --  Converter für MIX-Ersetzung
-    local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"] and AnimalFoodOverview:isTerraLife()
-
 	-- Fill data structure
 	self.overviewTableData = {}
 	DlgFrame.mixFillTypeIdxToAnimalTitle = {}
@@ -90,15 +85,14 @@ function DlgFrame:onOpen()
 
 		local animalNameForSection = animalName
 
-		local animalSubTypeName = ""
-		if isTerraLifePlus and animalFood.minAge ~= nil and animalFood.animalSubTypeIndex ~= nil then
-            -- Name über Subtype und Alter ermitteln
-            local animalSubType = g_currentMission.animalSystem.subTypes[animalFood.animalSubTypeIndex]
-            -- local subTypeFillTypeIndex = animalSubType.fillTypeIndex
-            -- subType.visuals[].minAge
-            -- subType.visuals[].store.name
-            animalSubTypeName = string.format("%s - %s(>= %s)", animalName, DlgFrame:GetVisualAnimalTitleByAge(animalSubType, animalFood.minAge), animalFood.minAge)
-			animalNameForSection = animalSubTypeName
+		if (animalFood.minAge ~= nil and animalFood.minAge > 0)
+            or animalFood.maxAge ~= nil then
+            -- Animalic-style age bucket: minAge / maxAge attributes on <animal>
+            -- without a subType. Catch-all entries (both nil) keep the plain
+            -- animalName so they don't get a redundant "[0..∞]" suffix.
+            local lo = tostring(animalFood.minAge or 0)
+            local hi = animalFood.maxAge ~= nil and tostring(animalFood.maxAge) or "∞"
+            animalNameForSection = string.format("%s [%s..%s mo]", animalName, lo, hi)
         end
 
 		local sectionText = string.format("%s (%s)", animalNameForSection, (animalFood.consumptionType == 1) and g_i18n:getText("txt_sequentiel") or g_i18n:getText("txt_Parallel"))
@@ -140,19 +134,6 @@ function DlgFrame.CompSectionItems(a, b)
 end
 
 
-function DlgFrame:GetVisualAnimalTitleByAge(animalSubType, ageInMonths)
-    local animalStoreTitle = "Unknown animal title"
-    local animalAge = ageInMonths == nil and 0 or ageInMonths
-
-    for i, visual in pairs(animalSubType.visuals) do
-        if animalAge >= visual.minAge then
-            animalStoreTitle = visual.store.name
-        end
-    end
-    return animalStoreTitle
-end
-
-
 function DlgFrame:isRecipeFillType(recipeFT)
     local isRecipeFT = false
     for idx, recipe in pairs(g_currentMission.animalFoodSystem.recipes) do
@@ -165,24 +146,7 @@ function DlgFrame:isRecipeFillType(recipeFT)
 end
 
 
-function DlgFrame:isConverterOutputFillType(animalTypeIx, outputFT)
-	-- g_currentMission.animalFoodSystem.converters exist only with TerraLifePlus
-    local isConverterOutputFT = false
-    if g_currentMission.animalFoodSystem.converters ~= nil and g_currentMission.animalFoodSystem.converters[animalTypeIx] ~= nil then
-        for inputFillTypeIx, outputFillTypeIx in pairs(g_currentMission.animalFoodSystem.converters[animalTypeIx]) do
-            if outputFT.index == outputFillTypeIx then
-                isConverterOutputFT = true
-                break
-			end
-        end
-	end
-    return isConverterOutputFT
-end
-
-
 function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItemsRet, animalName)
-    local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"] and AnimalFoodOverview:isTerraLife()
-
 	-- Collect allowed filltypes for each food group
 	for _, foodGroup in pairs(animalFood.groups) do
 		-- local item = {groupTitle=foodGroup.title, productionWeight=string.format("%.2f", foodGroup.productionWeight), eatWeight=string.format("%.2f", foodGroup.eatWeight), foodTypesLine="", fillTypes={}, fillTypesTitle={}}
@@ -202,19 +166,9 @@ function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItems
 
 		-- mixture fill types
 		dbPrintf("Mixtures: Animal=%s Group=%s", animalName, foodGroup.title)
-		if isTerraLifePlus and g_currentMission.animalFoodSystem.animalTypesIndexToMixtures ~= nil then
-			-- With TerraLifePlus
-			if g_currentMission.animalFoodSystem.animalTypesIndexToMixtures[animalFood.animalTypeIndex] ~= nil then
-				for mixFtIndex, ingredients in pairs(g_currentMission.animalFoodSystem.animalTypesIndexToMixtures[animalFood.animalTypeIndex]) do
-					DlgFrame:SearchIngredientsList(ingredients.ingredients, mixFtIndex, item, foodGroupFillTypes, animalFood.animalTypeIndex)
-				end
-			end
-		else
-			-- Standard
-			if g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex] ~= nil then
-				for i, mixFtIndex in pairs(g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex]) do
-					DlgFrame:SearchIngredientsList(g_currentMission.animalFoodSystem.mixtureFillTypeIndexToMixture[mixFtIndex].ingredients, mixFtIndex, item, foodGroupFillTypes, animalFood.animalTypeIndex)
-				end
+		if g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex] ~= nil then
+			for i, mixFtIndex in pairs(g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex]) do
+				DlgFrame:SearchIngredientsList(g_currentMission.animalFoodSystem.mixtureFillTypeIndexToMixture[mixFtIndex].ingredients, mixFtIndex, item, foodGroupFillTypes, animalName)
 			end
 		end
 
@@ -247,7 +201,7 @@ end
 
 
 
-function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroupFillTypes, animalTypeIndex)
+function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroupFillTypes, animalName)
 	local mixFt = g_fillTypeManager:getFillTypeByIndex(mixFtIndex)
 	dbPrintf("  Mixture: %s --> Mixture=%s (%s)", mixFtIndex, mixFt.name, mixFt.title)
 	DlgFrame.mixFillTypeIdxToAnimalTitle[mixFtIndex] = animalName
@@ -277,7 +231,6 @@ function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroup
 					end
 					if not isDouble then
 						local isRecipeFT = DlgFrame:isRecipeFillType(mixFt)
-						local isConverterFT = DlgFrame:isConverterOutputFillType(animalTypeIndex, mixFt)
 
 						if isRecipeFT then
 							dbPrintf("          --> Insert recipe")
@@ -287,26 +240,6 @@ function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroup
 							-- insert at end
 							local ftInfo = {title = mixFillTypeTitle, fillType = mixFt, ratio = ingredient.weight, order = 3}
 							table.insert(item.fillTypesInfos, ftInfo)
-						elseif isConverterFT then -- is only relevant for TerraLifePlus
-							dbPrintf("          --> Insert MIX")
-							-- replace by the converter types
-							if g_currentMission.animalFoodSystem.converters[animalTypeIndex] ~= nil then
-								for inputFillTypeIx, outputFillTypeIx in pairs(g_currentMission.animalFoodSystem.converters[animalTypeIndex]) do
-									local  inputFillType = g_fillTypeManager:getFillTypeByIndex(inputFillTypeIx)
-									local  outputFillType = g_fillTypeManager:getFillTypeByIndex(outputFillTypeIx)
-									if outputFillType.index == mixFt.index then
-
-										local inputFillTypeTitle = string.format("%s (%.0f%%)", inputFillType.title, ingredient.weight*100)
-										if isDbPrintfOn then
-											inputFillTypeTitle = string.format("%s - %s->%s)", inputFillTypeTitle, mixFt.name, foodGroupFillTypes[ingredientFtIndex])
-										end
-
-										-- insert after direct fill types
-										local ftInfo = {title = inputFillTypeTitle, fillType = inputFillType, ratio = ingredient.weight, order = 2}
-										table.insert(item.fillTypesInfos, ftInfo)
-									end
-								end
-							end
 						else
 							dbPrintf("          --> Insert original filetype")
 							-- insert after direct fill types
