@@ -109,9 +109,25 @@ function MixDlgFrame:getTitleForSectionHeader(list, section)
 end
 
 
+function MixDlgFrame:getIngredientDisplayTitle(ingredient)
+	local title = ingredient.title
+	if title ~= nil and title ~= "" then
+		if string.sub(title, 1, 5) == "$l10n" then
+			return g_i18n:getText(string.sub(title, 7))
+		end
+		return title
+	end
+	if ingredient.name ~= nil and ingredient.name ~= "" then
+		return ingredient.name
+	end
+	return "-"
+end
+
+
 function MixDlgFrame:populateCellForItemInSection(list, section, index, cell)
 	dbPrintf("MixDlgFrame:populateCellForItemInSection()")
 	local item = self.mixtureRecipesTableData[section].recipeIngredients[index]
+	cell:getAttribute("IngredientTitle"):setText(MixDlgFrame:getIngredientDisplayTitle(item))
 	cell:getAttribute("Min"):setText(item.minPercentage)
 	cell:getAttribute("Max"):setText(item.maxPercentage)
 	cell:getAttribute("FillTypeIcon"):setImageFilename(item.hudOverlayFilename)
